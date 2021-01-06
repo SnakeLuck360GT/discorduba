@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Eric</title>
+  </head>
+  <style>
+  .wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    color:#2C2F33;
+}
+
+  </style>
+  <body style="background-color:#FFFAF0">
+  <div class="wrapper">
+    <button class="button" onclick="sendMessage()">Ping Eric</button>
+</div>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/796326663213678592/HMLmV9EbW1pQFI6AiD_kkmdixqiZ1PMrFetawlaxGgIrwQ2E3pnlCtr6WjyZJpGGgjU6");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "",
+        avatar_url: "",
+        content: "<@793206241232027658> someone pressed the button"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
