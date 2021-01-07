@@ -17,10 +17,34 @@
     color:#2C2F33;
 }
 
+.rajesh {
+	position: absolute;
+    top: 40%;
+    width: 150px;
+    color:#2C2F33;
+}
+
+.chickenboy {
+	position: absolute;
+    top: 30%;
+    width: 150px;
+    color:#2C2F33;
+}
+
+.ranjith {
+	position: absolute;
+    top: 60%;
+    width: 150px;
+    color:#2C2F33;
+}
+
   </style>
   <body style="background-color:#FFFAF0">
   <div class="wrapper">
     <button class="button" onclick="sendMessage()">Ping Seed</button>
+    <button class="rajesh" onclick="seed()">Ping Seed (Rajesh)</button>
+    <button class="chickenboy" onclick="chicken()">Ping Seed (chicken boy)</button>
+    <button class="ranjith" onclick="ranjith()">Ping Seed (ranjith)</button>
 </div>
   </body>
 
@@ -28,6 +52,51 @@
     function sendMessage() {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/796133306818232320/MkgwUp7Q6XAgAOfqoFxV0kCRhYH0wjd4x5667wj66UxgWUSZyZ3Yk2qlugPldYq_g8o9");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "",
+        avatar_url: "",
+        content: "<@454731435513872385> someone pressed the button"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    
+    function seed() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/796799536500572251/fNmHkZlDyAOX0Mhq5Bf1Ph-bzo5CCRedvOqa2utghb2FPHVw5E5X59L8Caeyxl7aaiIe");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "",
+        avatar_url: "",
+        content: "<@454731435513872385> someone pressed the button"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    
+    function chicken() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/796800723396198428/E92xrhwqBRbbS_ZaFRRfc6hsiMbeRS57bRQ23JJWF0qLU5jTPw1SAp4rSmhD5BvyGY1H");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "",
+        avatar_url: "",
+        content: "<@454731435513872385> someone pressed the button"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    
+        function ranjith() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/796801381583290398/GfsgVGas8HI7stubap2WvE2mQyGZBY6DPzLEwEMIeh3AhLE1RsjnS1OF6tu0AUMxpvuw");
 
       request.setRequestHeader('Content-type', 'application/json');
 
