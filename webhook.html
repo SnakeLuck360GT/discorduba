@@ -1,0 +1,39 @@
+<form action="/submitted.html" id="form" onsubmit="return false;">
+    <label>Webhook name</label>
+  <br>
+    <input type="text" id="bigname">
+  <br>
+  <label>Avatar URL</label>
+<br>
+  <input type="text" id="baddyavatar">
+    <br>
+    <label>Webhook message</label>
+<br>
+    <input type="text" id="badmessage">
+<br>
+    <input style="width:175px "type="submit" onclick="sendMessage()">
+</form>
+
+<script>
+  function sendMessage() {
+      var request = new XMLHttpRequest();
+
+      request.open("POST", "https://discord.com/api/webhooks/798886456461885470/Ccfk5f0Ny-wkmAW1WWi9zSGvwf7f-4J_NKo9IBC4aN3PM3bmpZILu4qi_IrV4MNlWK5f");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username:  document.getElementById("bigname").value,
+        avatar_url: document.getElementById("baddyavatar").value,
+        content: document.getElementById("badmessage").value
+      }
+
+      request.send(JSON.stringify(params));
+    }
+
+function othername() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+}
+
+</script>
